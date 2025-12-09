@@ -1,15 +1,15 @@
-# 🧬 Sequence Alignment Viewer
+# Sequence Alignment Viewer
 
 A browser-based tool for aligning and visualizing DNA/RNA sequence alignments with automatic SNP detection and beautiful color-coded output.
 
 ## Features
 
-- 🔄 **Auto-align** unaligned FASTA sequences using MAFFT or MUSCLE
-- 🎨 **Color-coded visualization** of matches, SNPs, gaps, and ambiguous bases
-- 📊 **Detailed statistics** including identity percentage and SNP counts
-- 📥 **Download results** as HTML visualizations or aligned FASTA files
-- 🔒 **100% local** - all processing happens on your machine, no data uploaded
-- 🚀 **Easy to use** - simple drag-and-drop interface
+- **Auto-align** unaligned FASTA sequences using MAFFT or MUSCLE
+- **Color-coded visualization** of matches, SNPs, gaps, and ambiguous bases
+- **Detailed statistics** including identity percentage and SNP counts
+- **Download results** as HTML visualizations or aligned FASTA files
+- **100% local** - all processing happens on your machine, no data uploaded
+- **Easy to use** - simple drag-and-drop interface
 
 ## What It Does
 
@@ -98,7 +98,7 @@ mafft --version
 
 #### Step 3: Download the Tool
 
-Download `alignment_viewer_with_aligner.py` and save it to a folder on your computer.
+Download `alignment_viewer_script.py` and save it to a folder on your computer.
 
 ## Usage
 
@@ -111,7 +111,7 @@ Download `alignment_viewer_with_aligner.py` and save it to a folder on your comp
    ```
 3. Run the application:
    ```bash
-   streamlit run alignment_viewer_with_aligner.py
+   streamlit run alignment_viewer_script.py
    ```
 4. Your browser will automatically open to `http://localhost:8501`
 
@@ -146,18 +146,18 @@ ATGGCTAGCTAGCTAGCGAG
 ```
 
 Sequences can be:
-- ✅ Unaligned (different lengths) - will be aligned automatically
-- ✅ Already aligned (same lengths) - will be visualized directly
-- ✅ DNA or RNA
-- ✅ Any number of sequences (2 or more)
+- Unaligned (different lengths) - will be aligned automatically
+- Already aligned (same lengths) - will be visualized directly
+- DNA or RNA
+- Any number of sequences (2 or more)
 
 ## Understanding the Output
 
 ### Color Coding:
-- 🟢 **Green (Match)**: Position matches across all sequences
-- 🔴 **Red (SNP)**: Single nucleotide polymorphism - sequences differ here
-- ⚫ **Gray (Gap)**: Insertion/deletion gap (-)
-- 🟠 **Orange (Ambiguous)**: IUPAC ambiguity code (N, R, Y, etc.)
+- **Green (Match)**: Position matches across all sequences
+- **Red (SNP)**: Single nucleotide polymorphism - sequences differ here
+- **Gray (Gap)**: Insertion/deletion gap (-)
+- **Orange (Ambiguous)**: IUPAC ambiguity code (N, R, Y, etc.)
 
 ### Statistics Explained:
 - **Alignment length**: Total length of the aligned sequences
@@ -169,9 +169,9 @@ Sequences can be:
 
 ### SNP Counting Method:
 This tool uses the same method as `snp-dists`:
-- ✅ Only counts positions with standard bases (A, T, G, C)
-- ❌ Excludes positions with gaps (-)
-- ❌ Excludes positions with ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N)
+- Only counts positions with standard bases (A, T, G, C)
+- Excludes positions with gaps (-)
+- Excludes positions with ambiguity codes (R, Y, S, W, K, M, B, D, H, V, N)
 
 ## Troubleshooting
 
@@ -191,7 +191,7 @@ pip install streamlit
 - Close the other streamlit app, or
 - Use a different port:
   ```bash
-  streamlit run alignment_viewer_with_aligner.py --server.port 8502
+  streamlit run alignment_viewer_script.py --server.port 8502
   ```
 
 ### Browser doesn't open automatically
@@ -219,11 +219,11 @@ Or use conda which doesn't require sudo.
 
 ## Privacy & Security
 
-- ✅ **100% local processing** - no data leaves your computer
-- ✅ **No internet required** after installation
-- ✅ **Files processed in memory** - not saved to disk
-- ✅ **Works offline** once dependencies are installed
-- ✅ **Safe for sensitive/private data**
+- **100% local processing** - no data leaves your computer
+- **No internet required** after installation
+- **Files processed in memory** - not saved to disk
+- **Works offline** once dependencies are installed
+- **Safe for sensitive/private data**
 
 Perfect for working with:
 - Patient sequences
@@ -235,12 +235,12 @@ Perfect for working with:
 
 ### Custom Port
 ```bash
-streamlit run alignment_viewer_with_aligner.py --server.port 8080
+streamlit run alignment_viewer_script.py --server.port 8080
 ```
 
 ### Headless Mode (server without browser)
 ```bash
-streamlit run alignment_viewer_with_aligner.py --server.headless true
+streamlit run alignment_viewer_script.py --server.headless true
 ```
 
 ### Command Line Alignment (without GUI)
